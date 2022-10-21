@@ -26,10 +26,8 @@ export class DriveloginComponent implements OnInit {
       for (let i = 0; i < res.length; i++) {
         if (res[i].username === this.username && res[i].pass === this.pass) {
           alert("Login Succesfull");
-          this.router.navigate(['dashboard']);
-        } else {
-          alert("Username or Password is wrong");
-        }
+          this.router.navigate(['Default']);
+        } 
       }
     }, err => {
       alert("Something Went Wrong!!");

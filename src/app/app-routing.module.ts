@@ -14,7 +14,7 @@ const routes: Routes = [
     component: DriveloginComponent
   },
   {
-    path: 'dashboard',
+    path: 'Default',
     component: DefaultComponent,
     children: [{
       path: 'drivedashboard',

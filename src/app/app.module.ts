@@ -15,12 +15,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DefaultModule } from './layouts/default/default.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ViewfolderComponent } from './viewfolder/viewfolder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     
     DriveloginComponent,
+          ViewfolderComponent,
    
    
   ],

@@ -1,4 +1,6 @@
 import { Component, OnInit} from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import { FilterdialogComponent } from '../Dialogs/filterdialog/filterdialog.component';
 
 
 @Component({
@@ -7,12 +9,16 @@ import { Component, OnInit} from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-
-
   constructor(
-
+    public dialog: MatDialog
   ) { }
+  openDialog() {
+    const dialogRef = this.dialog.open(FilterdialogComponent);
+   
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
 
   ngOnInit() { }
   

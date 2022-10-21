@@ -3,7 +3,7 @@
      New</button>
 
      <mat-menu #menu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item  (click)="openDialog('0ms', '0ms')">
           <mat-icon>create_new_folder</mat-icon>
           <span>New Folder</span>
         </button>
