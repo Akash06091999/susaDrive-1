@@ -1,16 +1,29 @@
-<h2 mat-dialog-title>Install Angular</h2>
+<h2 mat-dialog-title>Filter</h2>
 <mat-dialog-content class="mat-typography">
-  <label for="input">Type</label>
+  <mat-label>Type</mat-label><span style="color: white ;">...........</span>
   <mat-form-field appearance="fill">
     <mat-label>Choose an option</mat-label>
-    <mat-select [disabled]="disableSelect.value">
-      <mat-option value="option1">Option 1</mat-option>
-      <mat-option value="option2">Option 2 </mat-option>
-      <mat-option value="option3">Option 3</mat-option>
+    <mat-select disableRipple>
+      <mat-option value="any"><span style="color: white ;">...........</span>Any</mat-option>
+      <mat-option value="Pdfs"><mat-icon style="color:rgb(190, 3, 3) ;" >picture_as_pdf</mat-icon>Pdfs</mat-option>
+      <mat-option value="Photos & images"><mat-icon color="warn">insert_photo</mat-icon>Photos & images</mat-option>
+      <mat-option value="Documents"><mat-icon color="primary"> format_align_left</mat-icon>Documents</mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-content class="mat-typography">
+  <mat-label>Owner</mat-label><span style="color: white ;">.........</span>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose an option</mat-label>
+    <mat-select  >
+      <mat-option value="Anyone" align="center">Anyone</mat-option>
+      <mat-option value="Owned by me">Owned by me</mat-option>
+      <mat-option value="Photos & images">Specific person</mat-option>
+    
     </mat-select>
   </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-button mat-dialog-close>Cancel</button>
-  <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
+  <button mat-button type="reset">Reset</button>
+  <button mat-flat-button [mat-dialog-close]="true" cdkFocusInitial color="primary">Filter</button>
 </mat-dialog-actions>

@@ -28,7 +28,7 @@ import { MatTableModule } from '@angular/material/table';
     MatPaginatorModule,
     MatTableModule
   ],
-
+ 
  
 })
 export class DefaultModule { }

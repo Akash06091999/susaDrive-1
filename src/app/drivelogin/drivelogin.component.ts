@@ -26,7 +26,7 @@ export class DriveloginComponent implements OnInit {
       for (let i = 0; i < res.length; i++) {
         if (res[i].username === this.username && res[i].pass === this.pass) {
           alert("Login Succesfull");
-          this.router.navigate(['Default']);
+          this.router.navigate(['drivedashboard']);
         } 
       }
     }, err => {
